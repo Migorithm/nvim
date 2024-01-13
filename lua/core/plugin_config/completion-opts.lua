@@ -13,6 +13,31 @@ local function on_attach(client, buffer)
   -- we could set keymaps related to LSP, etc here.
 end
 
+local keymap_opts = { buffer = buffer }
+-- Code navigation and shortcuts
+vim.keymap.set("n", "K", vim.lsp.buf.hover, keymap_opts)
+
+-- go to reference
+vim.keymap.set("n", "gr", vim.lsp.buf.references, keymap_opts)
+
+-- go to definition
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, keymap_opts)
+vim.keymap.set("n", "<c-]>", vim.lsp.buf.definition, keymap_opts)
+
+-- go to implementation
+vim.keymap.set("n", "gD", vim.lsp.buf.implementation, keymap_opts)
+
+
+-- code action!
+vim.keymap.set("i", "<c-.>", vim.lsp.buf.code_action, keymap_opts)
+vim.keymap.set("n", "<c-.>", vim.lsp.buf.code_action, keymap_opts)
+
+-- bracket
+vim.keymap.set("i", "<", "<><Left>")
+vim.keymap.set("i", "{", "{}<Left>")
+vim.keymap.set("i", "(", "()<Left>")
+vim.keymap.set("i", "\"", "\"\"<Left>")
+vim.keymap.set("i", "'", "''<Left>")
 
 -- Configure LSP through rust-tools.nvim plugin.
 -- rust-tools will configure and enable certain LSP features for us.

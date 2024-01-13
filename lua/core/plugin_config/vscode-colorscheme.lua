@@ -35,8 +35,7 @@ require('vscode').load()
 
 -- hl stands for highlight, you can inspect its info by putting `:Inspect` 
 vim.api.nvim_set_hl(0, "Normal", { fg = "#ffffff", bg = "#2b2a26" })
+vim.api.nvim_set_hl(0, "@keyword", { fg = "#5382cf", bg = "#2b2a26" })
+vim.api.nvim_set_hl(0, "@include", { fg = "#5382cf", bg = "#2b2a26" })
 
-local hl_groups = { 'DiagnosticUnderlineError' }
-for _, hl in ipairs(hl_groups) do
-  vim.cmd.highlight(hl .. ' gui=undercurl')
-end
+
