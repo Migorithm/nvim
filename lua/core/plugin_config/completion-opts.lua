@@ -32,12 +32,17 @@ vim.keymap.set("n", "gD", vim.lsp.buf.implementation, keymap_opts)
 vim.keymap.set("i", "<c-.>", vim.lsp.buf.code_action, keymap_opts)
 vim.keymap.set("n", "<c-.>", vim.lsp.buf.code_action, keymap_opts)
 
+-- rename
+vim.keymap.set("x","<F2>",vim.lsp.buf.rename, keymap_opts)
+
+
 -- bracket
 vim.keymap.set("i", "<", "<><Left>")
 vim.keymap.set("i", "{", "{}<Left>")
 vim.keymap.set("i", "(", "()<Left>")
 vim.keymap.set("i", "\"", "\"\"<Left>")
 vim.keymap.set("i", "'", "''<Left>")
+
 
 -- Configure LSP through rust-tools.nvim plugin.
 -- rust-tools will configure and enable certain LSP features for us.
