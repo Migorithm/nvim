@@ -48,3 +48,13 @@ vim.keymap.set('i' ,"<c-s>", "<ESC>:w<CR>")
 -- go to previously opened file
 vim.keymap.set("n","<c-[>","<c-6>")
 
+
+-- go to error, warning and so on
+vim.keymap.set("n", "ee", vim.diagnostic.goto_next)
+-- vim.keymap.set("n", "[g", vim.diagnostic.goto_prev)
+
+
+
+
+
+
