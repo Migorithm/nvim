@@ -41,7 +41,6 @@ vim.keymap.set("i", "<", "<><Left>")
 vim.keymap.set("i", "{", "{}<Left>")
 vim.keymap.set("i", "(", "()<Left>")
 vim.keymap.set("i", "\"", "\"\"<Left>")
-vim.keymap.set("i", "'", "''<Left>")
 
 
 -- Configure LSP through rust-tools.nvim plugin.
