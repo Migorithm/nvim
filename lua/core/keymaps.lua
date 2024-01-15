@@ -44,3 +44,7 @@ vim.keymap.set("c" ,"ft" , "FloatermNew --name=mifl --height=0.8 --width=0.7 --a
 vim.keymap.set("n" ,"<c-s>" , ":w <CR>")
 
 
+
+-- go to previously opened file
+vim.keymap.set("n","<c-[>","<c-6>")
+
