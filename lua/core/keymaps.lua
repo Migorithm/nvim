@@ -57,4 +57,5 @@ vim.keymap.set("n", "ee", vim.diagnostic.goto_next)
 -- nulify esc when in normal mode
 vim.keymap.set("n","<ESC>","i")
 
-
+-- find and replace
+vim.keymap.set("n","<c-r>",":%s/")

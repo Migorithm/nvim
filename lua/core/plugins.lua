@@ -31,7 +31,8 @@ return require('packer').startup(function(use)
   -- lsp
   use 'neovim/nvim-lspconfig'   
   use 'simrat39/rust-tools.nvim'
-
+  use 'williamboman/mason.nvim'    
+  use 'williamboman/mason-lspconfig.nvim'
 
 
   -- color scheme
