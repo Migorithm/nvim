@@ -56,7 +56,9 @@ vim.keymap.set("n", "ee", vim.diagnostic.goto_next)
 vim.keymap.set('n','<Esc>',"")
 
 -- find and replace
-vim.keymap.set("n","<c-r>",":%s/")
+vim.keymap.set("n","rr",":%s/")
+
+
 
 -- remove word when cursor is in the middle of word
 vim.keymap.set("n","<s-d>","diw")
