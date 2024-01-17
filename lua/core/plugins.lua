@@ -57,13 +57,6 @@ return require('packer').startup(function(use)
   -- terminal
   use 'voldikss/vim-floaterm'
   
-  -- Rust test
-  use {
-    "klen/nvim-test",
-    config = function()
-      require('nvim-test').setup()
-    end
-  }
 
 
   -- Automatically set up your configuration after cloning packer.nvim

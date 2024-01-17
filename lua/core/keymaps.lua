@@ -58,6 +58,8 @@ vim.keymap.set('n','<Esc>',"")
 -- find and replace
 vim.keymap.set("n","rr",":%s/")
 
+-- copy to both clipboard
+vim.keymap.set("v","bc","\"+y")
 
 
 -- remove word when cursor is in the middle of word
