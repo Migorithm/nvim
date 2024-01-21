@@ -9,5 +9,6 @@ cd ~/.config
 clone current_repo
 
 brew install lua-language-server
+brew install ripgrep
 
 ```
