@@ -21,7 +21,7 @@ return {
       italic_comments = true,
 
       -- Disable nvim-tree background color
-      disable_nvimtree_bg = true,
+      disable_nvimtree_bg = false,
 
       -- Override colors (see ./lua/vscode/colors.lua)
       color_overrides = {
@@ -38,9 +38,11 @@ return {
     require('vscode').load()
 
     -- hl stands for highlight, you can inspect its info by putting `:Inspect` 
-    vim.api.nvim_set_hl(0, "Normal", { fg = "#ffffff", bg = "#2b2a26" })
+    vim.api.nvim_set_hl(0, "Normal", {  bg = "#2b2a26" })
     vim.api.nvim_set_hl(0, "@keyword", { fg = "#5382cf", bg = "#2b2a26" })
     vim.api.nvim_set_hl(0, "@include", { fg = "#5382cf", bg = "#2b2a26" })
+    vim.api.nvim_set_hl(0, "InlayHints",{ fg="#756e5b"})
+
   end
 }
 
