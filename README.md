@@ -7,4 +7,7 @@ nvim looks fancy - that itself is worth a try.
 mkdir -p ~/.config
 cd ~/.config
 clone current_repo
+
+brew install lua-language-server
+
 ```

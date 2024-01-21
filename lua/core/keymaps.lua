@@ -23,7 +23,6 @@ vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 
 
 
-
 -- select word
 vim.keymap.set("n", "<c-d>", "viw")
 
@@ -33,7 +32,7 @@ vim.keymap.set("x", "<c-j>", ":move '>+1<cr>gv-gv") -- down
 
 
 -- fold expr
-vim.keymap.set("n", "<c-c>", "zc") 
+vim.keymap.set("n", "<c-c>", "zc")
 
 -- find ( /word )
 -- terminal
@@ -64,3 +63,19 @@ vim.keymap.set("v","bc","\"+y")
 
 -- remove word when cursor is in the middle of word
 vim.keymap.set("n","<s-d>","diw")
+
+
+
+
+-- bracket
+vim.keymap.set("i", "<", "<><Left>")
+vim.keymap.set("i", "{", "{}<Left>")
+vim.keymap.set("i", "(", "()<Left>")
+vim.keymap.set("i", "\"", "\"\"<Left>")
+
+
+-- bracket
+vim.keymap.set("i", "<", "<><Left>")
+vim.keymap.set("i", "{", "{}<Left>")
+vim.keymap.set("i", "(", "()<Left>")
+vim.keymap.set("i", "\"", "\"\"<Left>")
