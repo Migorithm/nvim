@@ -24,6 +24,20 @@ local function setup_rust_tools()
     map("n", "<leader>M", function()
       ((require("rust-tools")).expand_macro).expand_macro()
     end, { desc = "expand macros recursively" })
+
+    -- auto format on save
+    vim.api.nvim_create_augroup("AutoFormat",{})
+
+    vim.api.nvim_create_autocmd(
+    "BufWritePost",
+    {
+      pattern ="*.rs",
+      group = "AutoFormat",
+      callback = function()
+        vim.cmd("silent !cargo fmt -q --all")
+      end
+    }
+    )
   end
 
   require("rust-tools").setup({
