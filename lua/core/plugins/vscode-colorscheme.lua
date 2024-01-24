@@ -25,7 +25,7 @@ return {
 
       -- Override colors (see ./lua/vscode/colors.lua)
       color_overrides = {
-        vscLineNumber = '#FFFFFF',
+        vscLineNumber = "#756e5b"
       },
 
       -- Override highlight groups (see ./lua/vscode/theme.lua)
@@ -42,7 +42,7 @@ return {
     vim.api.nvim_set_hl(0, "@keyword", { fg = "#5382cf", bg = "#2b2a26" })
     vim.api.nvim_set_hl(0, "@include", { fg = "#5382cf", bg = "#2b2a26" })
     vim.api.nvim_set_hl(0, "InlayHints",{ fg="#756e5b"})
-
+    vim.api.nvim_set_hl(0,"DiagnosticWarn",{fg="#756e5b"})
   end
 }
 

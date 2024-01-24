@@ -26,9 +26,14 @@ vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 -- select word
 vim.keymap.set("n", "<c-d>", "viw")
 
+
 -- line change
-vim.keymap.set("x", "<c-k>", ":move '<-2<cr>gv-gv") -- up
-vim.keymap.set("x", "<c-j>", ":move '>+1<cr>gv-gv") -- down
+vim.keymap.set("n", "<leader><Up>", ":m .-2<CR>==") -- move line up(n)
+vim.keymap.set("v", "<leader><Down>", ":m '>+1<CR>gv=gv") -- move line up(v)
+
+vim.keymap.set("n", "<leader><Down>", ":m .+1<CR>==") -- move line down (n)
+vim.keymap.set("v", "<leader><Up>", ":m '<-2<CR>gv=gv") -- move line down(v)
+
 
 
 -- fold expr
@@ -64,7 +69,8 @@ vim.keymap.set("v","bc","\"+y")
 -- remove word when cursor is in the middle of word
 vim.keymap.set("n","<s-d>","diw")
 
-
+-- remove line before cursor 
+vim.keymap.set("n","<leader>c<Left>","d^")
 
 
 -- bracket
