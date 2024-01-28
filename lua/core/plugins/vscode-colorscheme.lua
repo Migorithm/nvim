@@ -38,11 +38,16 @@ return {
     require('vscode').load()
 
     -- hl stands for highlight, you can inspect its info by putting `:Inspect` 
-    vim.api.nvim_set_hl(0, "Normal", {  bg = "#2b2a26" })
-    vim.api.nvim_set_hl(0, "@keyword", { fg = "#5382cf", bg = "#2b2a26" })
-    vim.api.nvim_set_hl(0, "@include", { fg = "#5382cf", bg = "#2b2a26" })
+    vim.api.nvim_set_hl(0, "Normal", {  bg = "#1d1e24" })
+    vim.api.nvim_set_hl(0, "@keyword", { fg = "#5382cf" })
+    vim.api.nvim_set_hl(0, "@include", { fg = "#5382cf" })
+    vim.api.nvim_set_hl(0, "@module", { fg = "#5382cf" })
+    vim.api.nvim_set_hl(0, "@function.macro", { fg = "#5382cf" })
     vim.api.nvim_set_hl(0, "InlayHints",{ fg="#756e5b"})
     vim.api.nvim_set_hl(0,"DiagnosticWarn",{fg="#756e5b"})
+
+    -- color for gitblame, inlay hints and so on.
+    vim.api.nvim_set_hl(0, "Comment",{ fg="#4d483e"})
   end
 }
 

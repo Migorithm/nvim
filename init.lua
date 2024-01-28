@@ -18,6 +18,7 @@ local function load_plugins()
   end
 
   vim.opt.runtimepath:prepend({ lazy_path })
+  vim.opt.splitright=true
 
   require("lazy").setup("core.plugins", {
     root = vim.fn.stdpath("data") .. "/lazy",
@@ -33,15 +34,3 @@ load_plugins()
 
 
 
---vim.api.nvim_create_augroup("AutoFormat",{})
-
---vim.api.nvim_create_autocmd(
---    "BufWritePost",
---    {
---      pattern ="*.rs",
---      group = "AutoFormat",
---      callback = function()
---        vim.cmd("silent !cargo fmt -q --all")
---      end
---    }
---)
