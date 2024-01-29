@@ -47,3 +47,17 @@ vim.keymap.set("n", "<leader>oc", function()
   vim.cmd.RustLsp("openCargo")
 end, { silent = true, buffer = bufnr })
 
+
+  -- auto format on save
+vim.api.nvim_create_augroup("AutoFormat",{})
+
+vim.api.nvim_create_autocmd(
+    "BufWritePost",
+  {
+    pattern ="*.rs",
+    group = "AutoFormat",
+    callback = function()
+      vim.cmd("silent !cargo fmt -q --all")
+    end
+  }
+)
